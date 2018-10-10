@@ -2,7 +2,7 @@ import groovy.json.JsonOutput
 def TAG_ENV
 node {
     parameters {
-        string(name: 'APP_NAME', description: 'Short app name to be deployed')
+        string(name: 'APP_NAME', description: 'Short app name to be deployedd')
         string(name: 'BUILD_TAG', description: 'Full docker image path')
         string(name: 'SLACK_URL', description: 'Full docker image path')
         string(name: 'CHANNEL', description: 'Full docker image path', 'default': '#notify-dev')
