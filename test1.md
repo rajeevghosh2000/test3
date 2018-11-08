@@ -11,7 +11,7 @@ The overall deployment is divided into 3 steps:
 
 3.  Deploying the Artifacts to on-premises standalone system
 
-** 1.1 Installation Preparation:**
+** 1.1 Installation Preparation: **
 -----------------------------
 
 To start with, the user has to clone a git repo (amlops) which contains
