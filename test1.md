@@ -294,7 +294,7 @@ structure and deployment can start.
     ipulse which has multiple dirs and each dir has src dir and jar
     files.
 
-# Deploying the artifacts to on-premises servers #
+# 1.3 Deploying the artifacts to on-premises servers #
 --------------------------------------------------
 
 Once the project artifacts are in the correct directory, we can start
@@ -471,29 +471,29 @@ d)  Start supervisord process which will start factbase Application.
 
 a)  Login as dep\_user and export the following variables:
 
-export IPULSE\_HOME==/home/\<dep-user\>/IPULSE
-
-export FACTBASE\_PORT=8080
-
-export FACTBASE\_PROTO=http
-
-export FACTBASE\_HOST=fb.quantiply.com
-
-export QUANT\_ID\_PEM=/tmp/uaa.pub
-
-export QUANT\_TRUSTSTORE\_FILE=/tmp/truststore.jks
-
-export QUANT\_ID\_CLIENT=qtz-cli
-
-export QUANT\_ID\_CLIENT\_SECRET=quantiply123
-
-export QUANT\_ID\_PULSE\_USER=superuser\@quantiply.com
-
-export QUANT\_ID\_PULSE\_USER\_PWD=quantiply
-
-export QUANT\_ID\_HOST=qid.quantiply.com
-
-export QUANT\_ID\_PORT=8443
+> export IPULSE\_HOME==/home/\<dep-user\>/IPULSE
+>
+> export FACTBASE\_PORT=8080
+>
+> export FACTBASE\_PROTO=http
+>
+> export FACTBASE\_HOST=fb.quantiply.com
+>
+> export QUANT\_ID\_PEM=/tmp/uaa.pub
+>
+> export QUANT\_TRUSTSTORE\_FILE=/tmp/truststore.jks
+>
+> export QUANT\_ID\_CLIENT=qtz-cli
+>
+> export QUANT\_ID\_CLIENT\_SECRET=quantiply123
+>
+> export QUANT\_ID\_PULSE\_USER=superuser\@quantiply.com
+>
+> export QUANT\_ID\_PULSE\_USER\_PWD=quantiply
+> 
+> export QUANT\_ID\_HOST=qid.quantiply.com
+>
+> export QUANT\_ID\_PORT=8443
 
 b)  Copy all the iPulse jar to IPULSE\_HOME
 
