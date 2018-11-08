@@ -158,7 +158,7 @@ f)  Generate certificates based on the values mentioned in input file.
 
 Following are the options we can choose from:
 
-### Create tarball ###
+### 1.2.1 Create tarball ###
 
 The tarball contains everything needed for the deployment(e.g scripts,
 pkgs , jars, misc utilities and supporting files). Upload the tarball to
@@ -168,7 +168,7 @@ either nexus or to AWS S3.
 collection of multiple .tar.gz file of each Application which are kept
 in a folder/bucket.*
 
-#### [Procedure:]{.underline} ####
+#### Procedure: ####
 
 1.  User 1 has to download the platform kits(e.g. jdk, maven, yum utils
     etc) either from nexus or from internet.
@@ -185,7 +185,7 @@ in a folder/bucket.*
     any storage media and then starts the installation in
     customer-premises.
 
-**[Pros: ]{.underline}**
+#### Pros: ####
 
 1.  Standard practice which most tech companies follows for the
     deployment .
@@ -202,7 +202,7 @@ in a folder/bucket.*
 5.  Excellent choice for the first time deployment . For the subsequent
     installation, can just change the jars of the Appls (if possible)
 
-**[Cons:]{.underline}**
+#### Cons: ####
 
 1.  Size of tar ball is huge , hence storage of this tarball is a bit
     concern.
@@ -215,7 +215,7 @@ in a folder/bucket.*
 
 4.  Not a good option if need to deploy more often.
 
-### **Use jenkins**
+### 1.2.2 Use jenkins ###
 
 Currently Jenkins is used for CI/CD tool. It is responsible for
 compiling Appl code in github, building docker image, push it to nexus
@@ -224,7 +224,7 @@ and then deploy Docker containers with that image.
 We need to include an additional step to push the Application artifacts
 (like jar) to Nexus.
 
-**[Procedure:]{.underline}**
+#### Procedure: ####
 
 1.  User runs Jenkins pipeline job manually or automatic with each
     commit which generates Application artifacts and is pushed to Nexus
@@ -237,7 +237,7 @@ We need to include an additional step to push the Application artifacts
     Note: Need to change existing Jenkins file to push the artifacts to
     nexus.
 
-**[Pros: ]{.underline}**
+#### Pros: ####
 
 1.  No extra steps in the script to clone git repo, build the artifacts.
     Instead the user has to just download the artifact from nexus.
@@ -249,7 +249,7 @@ We need to include an additional step to push the Application artifacts
 3.  Since no interaction with Git, the script needs lesser manual
     intervention to enter username and password.
 
-**[Cons:]{.underline}**
+#### Cons: ####
 
 1.  While pushing the artifacts to Nexus, it will be tagged . The user
     need to remember which tag to use while downloading the artifacts
@@ -263,13 +263,13 @@ We need to include an additional step to push the Application artifacts
     ipulse , its like 11GB). Thus pushing these artifacts to Nexus can
     gradually take most of the storage in Nexus
 
-### **Clone repo from Github and build locally**
+### 1.2.3 Clone repo from Github and build locally ###
 
 In this approach, Git Hub repo will be cloned and then using maven or
 gradle, it will be build. Then the artifacts will be put in correct dir
 structure and deployment can start.
 
-**[Procedure:]{.underline}**
+#### Procedure: ####
 
 1.  User runs a script which downloads all the Platform kits from Nexus
     and then installs those Platform kits.
@@ -277,13 +277,13 @@ structure and deployment can start.
 2.  Next user runs another script which downloads the github repo,
     builds it and then installs those Appls.
 
-**[Pros: ]{.underline}**
+#### Pros: ####
 
 1.  Very straightforward. Clones the github repo containing latest code.
     Builds it and then installs it. No need to push the artifacts
     anywhere or remember which jar contains what features/fix.
 
-**[Cons:]{.underline}**
+#### Cons:####
 
 1.  Bit complex since we need to download the Platform kits from Nexus
     and Application repo from github.
@@ -294,7 +294,7 @@ structure and deployment can start.
     ipulse which has multiple dirs and each dir has src dir and jar
     files.
 
-**Deploying the artifacts to on-premises servers**
+# Deploying the artifacts to on-premises servers #
 --------------------------------------------------
 
 Once the project artifacts are in the correct directory, we can start
@@ -311,7 +311,7 @@ c)  Install DB kits e.g. Oracle, OrientDB, Elastic search, Postgres
 
 d)  Install Quantiply Application kits e.g. Factbase, iPulse, Quant-id.
 
-### **Installing Platform pkgs:**
+### Installing Platform pkgs ###
 
 a)  To install Platform pkgs, We are using the pkgs that are already
     copied from nexus as mentioned in section 1.2 .
@@ -321,7 +321,7 @@ b)  After installing/configuring the pkgs, we are coping the supporting
     location e.g. after installing Maven, need to copy settings.xml to
     .m2 dir.
 
-### **Installing Oracle:**
+### Installing Oracle: ###
 
 a)  While installing oracle , we are installing oracle rpm file , then
     setting below env variables:
@@ -354,7 +354,7 @@ b)  Then configuring the DB as root user(since any other use is not
 c)  changing the HTTP port from 8080 to 8040 since port 8080 is used by
     factbase.
 
-### **Installing Elastic Search:**
+### Installing Elastic Search: ###
 
 a)  Check if JDK is installed.
 
@@ -372,7 +372,7 @@ e)  Copy supporting files to respective dir.
 
 f)  Login as "elasticsearch" user and start ES process
 
-### **Installing OrientDB:**
+### Installing OrientDB: ###
 
 a)  Set below env variables:
 
@@ -405,7 +405,7 @@ d)  Create Database for factbase
 
 e)  Start OrientDB as dep user.
 
-### **Installing Postgres:**
+### Installing Postgres: ###
 
 a)  Copy supporting files to respective dir.
 
@@ -448,7 +448,7 @@ c)  Login as postgres user and set below env variables:
 
 d)  Start Postgres
 
-### **Installing Factbase:**
+### Installing Factbase: ###
 
 a)  Login as dep\_user and export the following variables:
 
@@ -467,7 +467,7 @@ c)  Edit supervisord.conf file to replace env variables with correct
 
 d)  Start supervisord process which will start factbase Application.
 
-### **Installing IPULSE:**
+### Installing IPULSE: ###
 
 a)  Login as dep\_user and export the following variables:
 
@@ -499,7 +499,7 @@ b)  Copy all the iPulse jar to IPULSE\_HOME
 
 c)  Start iPulse Appl
 
-### **Installing QuantID:**
+### Installing QuantID: ###
 
 a)  Login as dep\_user and create a tomcat home dir
 
