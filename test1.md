@@ -16,7 +16,7 @@ The overall deployment is divided into 3 steps:
 
 To start with, the user has to clone a git repo (amlops) which contains
 all the scripts to automate the deployment . Besides that it also
-contains pkgs folder which contains supporting files (e.g. for gradle ,
+contains pkgs folder which contains supporting files (e.g. for gradle,
 it contains gradle.properties which contains details to connect to
 Nexus. Also, for factbase, it contains supervisord.conf file). Next we
 need to run a script which does following steps :
