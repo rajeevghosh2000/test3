@@ -11,7 +11,7 @@ The overall deployment is divided into 3 steps:
 
 3.  Deploying the Artifacts to on-premises standalone system
 
-** 1.1 Installation Preparation: **
+# 1.1 Installation Preparation: #
 -----------------------------
 
 To start with, the user has to clone a git repo (amlops) which contains
@@ -153,12 +153,12 @@ e)  Install utilities like wget, unzip etc which are needed to download
 
 f)  Generate certificates based on the values mentioned in input file.
 
-**Downloading Project Artifacts**
+# 1.2 Downloading Project Artifacts #
 ---------------------------------
 
 Following are the options we can choose from:
 
-### **Create tarball **
+### Create tarball ###
 
 The tarball contains everything needed for the deployment(e.g scripts,
 pkgs , jars, misc utilities and supporting files). Upload the tarball to
@@ -168,7 +168,7 @@ either nexus or to AWS S3.
 collection of multiple .tar.gz file of each Application which are kept
 in a folder/bucket.*
 
-**[Procedure:]{.underline}**
+#### [Procedure:]{.underline} ####
 
 1.  User 1 has to download the platform kits(e.g. jdk, maven, yum utils
     etc) either from nexus or from internet.
