@@ -25,119 +25,115 @@ a)  User needs to create an input file or can just edit the existing
     file which details all the values that will be part of user input
     during deployment. The sample file will be like :
 
-DEP\_user=
-
-Domain\_name=
-
-DEFAULT\_ORACLE\_SYS\_PASS=
-
-FB\_DB\_USERNAME=
-
-FB\_DB\_PASSWORD=
-
-PREDICTS\_DB\_USERNAME=
-
-PREDICTS\_DB\_PASSWORD=
-
-KEYSTORE\_FILE\_PATH=
-
-KEYSTORE\_PASSWORD=
-
-KEY\_PASSWORD=
-
-KEYSTORE\_FILE\_PATH=
-
-TRUSTSTORE\_FILE\_PATH=
-
-TRUSTSTORE\_PASSWORD=
-
-SSL\_CRT\_FILE=
-
-SSL\_KEY\_FILE=
-
-ORIENTDB\_ROOT\_PASSWORD=
-
-ORIENTDB\_JAVA\_OPTS=
-
-POSTGRESQL\_VERSION=
-
-PGUSER=
-
-QUID\_DB\_USER=
-
-QUID\_DB\_PASSWORD=
-
-FACTBASE\_VERSION=
-
-SPRING\_ACTIVE\_PROFILE=
-
-Oracle\_server\_hostname=
-
-Oracle\_server\_HostIP=
-
-MDB\_server\_hostname=
-
-MDB\_server\_HostIP=
-
-Quantid\_server\_hostname=
-
-Quantid\_server\_HostIP=
-
-ES\_server\_HostIP=
-
-ES\_server\_hostname=
-
-Factbase\_hostname=
-
-Factbase\_HostIP=
-
-iPulse\_hostname=
-
-iPulse\_HostIP
-
-OrientDB\_hostname=
-
-OrientDB\_HostIP=
-
-FACTBASE\_VERSION=
-
-SPRING\_ACTIVE\_PROFILE=
-
-FB\_JAVA\_OPTS=
-
-FACTBASE\_PROTO=
-
-QUANT\_ID\_PEM=
-
-QUANT\_TRUSTSTORE\_FILE=
-
-QUANT\_ID\_CLIENT\_SECRET=
-
-QUANT\_ID\_PULSE\_USER=
-
-QUANT\_ID\_PULSE\_USER\_PWD=
-
+> DEP\_user=
+>
+> Domain\_name=
+> 
+> DEFAULT\_ORACLE\_SYS\_PASS=
+>
+> FB\_DB\_USERNAME=
+>
+> FB\_DB\_PASSWORD=
+>
+> PREDICTS\_DB\_USERNAME=
+>
+> PREDICTS\_DB\_PASSWORD=
+>
+> KEYSTORE\_FILE\_PATH=
+>
+> KEYSTORE\_PASSWORD=
+>
+> KEY\_PASSWORD=
+>
+> KEYSTORE\_FILE\_PATH=
+>
+> TRUSTSTORE\_FILE\_PATH=
+>
+> TRUSTSTORE\_PASSWORD=
+> 
+> SSL\_CRT\_FILE=
+> 
+> SSL\_KEY\_FILE=
+>
+> ORIENTDB\_ROOT\_PASSWORD=
+>
+> ORIENTDB\_JAVA\_OPTS=
+>
+> POSTGRESQL\_VERSION=
+> 
+> PGUSER=
+>
+> QUID\_DB\_USER=
+> 
+> QUID\_DB\_PASSWORD=
+>
+> Oracle\_server\_hostname=
+>
+> Oracle\_server\_HostIP=
+> 
+> MDB\_server\_hostname=
+> 
+> MDB\_server\_HostIP=
+> 
+> Quantid\_server\_hostname=
+> 
+> Quantid\_server\_HostIP=
+> 
+> ES\_server\_HostIP=
+> 
+> ES\_server\_hostname=
+> 
+> Factbase\_hostname=
+>
+> Factbase\_HostIP=
+>
+> iPulse\_hostname=
+>
+> iPulse\_HostIP
+>
+> OrientDB\_hostname=
+> 
+> OrientDB\_HostIP=
+>
+> FACTBASE\_VERSION=
+>
+> SPRING\_ACTIVE\_PROFILE=
+> 
+> FB\_JAVA\_OPTS=
+> 
+> FACTBASE\_PROTO=
+> 
+> QUANT\_ID\_PEM=
+> 
+> QUANT\_TRUSTSTORE\_FILE=
+> 
+> QUANT\_ID\_CLIENT\_SECRET=
+> 
+> QUANT\_ID\_PULSE\_USER=
+> 
+> QUANT\_ID\_PULSE\_USER\_PWD=
+> 
 \#\# For certificates
 
-CA\_COUNTRY=US
-
-CA\_STATE=SanJose
-
-CA\_LOCALITY=SanJose
-
-CA\_ORG=Quantiply
-
-CA\_COMMON\_NAME=ca.quantiply.com
-
-SUBJ\_COUNTRY=US
-
-SUBJ\_STATE=SanJose
-
-SUBJ\_LOCALITY=SanJose
-
-SUBJ\_ORG=Quantiply
-
-SUBJ\_COMMON\_NAME=\*.quantiply.com
+> CA\_COUNTRY=US
+> 
+> CA\_STATE=SanJose
+> 
+> CA\_LOCALITY=SanJose
+>
+> CA\_ORG=Quantiply
+>
+> CA\_COMMON\_NAME=ca.quantiply.com
+>
+> SUBJ\_COUNTRY=US
+>
+> SUBJ\_STATE=SanJose
+>
+> SUBJ\_LOCALITY=SanJose
+> 
+> SUBJ\_ORG=Quantiply
+> 
+> SUBJ\_COMMON\_NAME=\*.quantiply.com
 
 b)  Create deployment user and provide sudo access to it,
 
